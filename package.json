@@ -36,8 +36,9 @@
     "tape": "^4.6.0"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^8.0.0",
     "app2png": "^1.0.0",
-    "fuzzyfind": "^2.0.0",
-    "mkdirp": "^0.5.1"
+    "fuzzyfind": "^2.1.0",
+    "mkdirp": "^0.5.5"
   }
 }
