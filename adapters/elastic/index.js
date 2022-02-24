@@ -1,6 +1,7 @@
 const { fork } = require('child_process')
 const path = require('path')
 const Adapter = require('../../lib/adapter')
+const { Client } = require('@elastic/elasticsearch')
 
 const fileFinderPath = path.join(__dirname, 'fileFinder.js')
 const appCacheProcess = path.join(__dirname, 'appCache.js')
@@ -9,6 +10,8 @@ class qFinderElastic extends Adapter {
   constructor (context, env = {}) {
     super(context, env)
     this.runner = null
+    this.client = new Client({ node: 'http://localhost:9200' })
+    console.info("Elastic client is up!")
   }
 
   findFiles (query) {

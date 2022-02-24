@@ -38,7 +38,10 @@
   "dependencies": {
     "@elastic/elasticsearch": "^8.0.0",
     "app2png": "^1.0.0",
+    "elasticsearch": "^16.7.3",
+    "elasticsearchclient": "^0.5.3",
     "fuzzyfind": "^2.1.0",
-    "mkdirp": "^0.5.5"
+    "mkdirp": "^0.5.5",
+    "undici": "^4.14.1"
   }
 }
