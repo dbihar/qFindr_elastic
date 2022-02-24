@@ -1,7 +1,4 @@
-# Zazu File Finder
-
-[![Travis Build Status](https://travis-ci.org/tinytacoteam/zazu-file-finder.svg?branch=master)](https://travis-ci.org/tinytacoteam/zazu-file-finder)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/b5t4tavohkhmqrer/branch/master?svg=true)](https://ci.appveyor.com/project/blainesch/zazu-file-finder)
+# qFindr File Finder
 
 Find files and applications on your computer easily.
 
@@ -21,12 +18,12 @@ name:
 
 ## Installing
 
-Add `tinytacoteam/zazu-file-finder` inside of `plugins` block of your  `~/.zazurc.json` file.
+Add `dbihar/qFindr_elastic` inside of `plugins` block of your  `~/.zazurc.json` file.
 
 ~~~ json
 {
   "plugins": [
-    "tinytacoteam/zazu-file-finder"
+    "dbihar/qFindr_elastic"
   ]
 }
 ~~~
@@ -75,7 +72,7 @@ If you want to change the matching algorithm you can:
 {
   "plugins": [
     {
-      "name": "tinytacoteam/zazu-file-finder",
+      "name": "dbihar/qFindr_elastic",
       "variables": {
         "matchBy": "stringincludes" // "fuzzyfind" by default
       }
