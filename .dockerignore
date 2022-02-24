@@ -1,5 +1,4 @@
+.git
 data
 node_modules
 *.png
-.nyc_output/
-coverage/
