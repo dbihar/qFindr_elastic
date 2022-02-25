@@ -4,7 +4,7 @@ const Cache = require('./lib/cache')
 module.exports = (context) => {
   return {
     respondsTo: (query) => {
-      return query.match(/^[\w\-.\\/ ]+$/)
+      return query
     },
     search: (query, env = {}) => {
       const { cwd, console } = context
