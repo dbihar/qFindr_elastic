@@ -1,10 +1,10 @@
 {
-  "name": "zazu-file-finder",
+  "name": "qfindr-file-finder",
   "version": "1.1.0",
-  "description": "A file finder for Zazu.",
+  "description": "A file finder for qFindr.",
   "main": "appCache.js",
   "keywords": [
-    "zazu",
+    "qFindr",
     "file",
     "finder",
     "search",
