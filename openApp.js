@@ -6,7 +6,14 @@ module.exports = (pluginContext) => {
   return (app, env = {}) => {
     return new Promise((resolve, reject) => {
       if (process.platform === 'win32' || process.platform === 'darwin') {
-        return resolve(app)
+        //console.info("Run this:")
+        //console.info(app)
+        const exec = require('child_process').exec;
+        const proccessing = exec(app);
+        proccessing.stdout.on('data', function(data) {
+          console.log(data); 
+        });
+        return resolve("")
       }
 
       // Use absolute paths at all time
