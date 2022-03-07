@@ -9,8 +9,7 @@ module.exports = (pluginContext) => {
     return new Promise((resolve, reject) => {
       if (process.platform === 'win32' || process.platform === 'darwin') {
         console.info("Run this:")
-
-        app = "start \"\" ".concat(app)
+        if(!app.includes("start")){app = "\"".concat(app).concat("\"")}
         console.info(app)
         
         const proccessing = exec(app);
