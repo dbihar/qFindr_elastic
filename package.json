@@ -21,8 +21,8 @@
     "lint": "eslint .",
     "test": "nyc tape test | tap-spec"
   },
-  "author": "Tiny Taco Team",
-  "license": "MIT",
+  "author": "Insight LLC",
+  "license": "All rights reserved",
   "devDependencies": {
     "coveralls": "^2.12.0",
     "eslint": "^3.13.1",
