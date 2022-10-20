@@ -16,7 +16,7 @@ module.exports = (pluginContext) => {
         else if(!app.includes("start") && !app.includes("explorer.exe")){app = "\"".concat(app).concat("\"")}
         
         if(app.includes("explorer.exe")){
-          app = app.replace("/select", "select").replace("/", "\\").replace("select", "/select")
+          app = app.replace("/select", "select").replace(/\//g, "\\").replace("select", "/select")
         }
         console.info(app)
         
