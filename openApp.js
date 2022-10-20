@@ -9,11 +9,11 @@ module.exports = (pluginContext) => {
     return new Promise((resolve, reject) => {
       if (process.platform === 'win32' || process.platform === 'darwin') {
         console.info("Run this:")
-        if(!app.includes(".") && !app.includes("start")){
+        if(!app.includes(".") && !app.includes("start") && !app.includes("explorer.exe")){
           console.info("It's Email")
           app = path.join(path.join(__dirname, "start_outlook_id.dist"), "start_outlook_id.exe") + " " + app
         }
-        else if(!app.includes("start")){app = "\"".concat(app).concat("\"")}
+        else if(!app.includes("start") && !app.includes("explorer.exe")){app = "\"".concat(app).concat("\"")}
         console.info(app)
         
         const proccessing = exec(app);
