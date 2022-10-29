@@ -14,9 +14,20 @@ module.exports = (pluginContext) => {
           app = path.join(path.join(__dirname, "start_outlook_id.dist"), "start_outlook_id.exe") + " " + app
         }
         else if(!app.includes("start") && !app.includes("explorer.exe")){app = "\"".concat(app).concat("\"")}
-        
-        if(app.includes("explorer.exe")){
-          app = app.replace("/select", "select").replace(/\//g, "\\").replace("select", "/select")
+        else{
+          // Check if there are 2 zip occurances, then don't replace select with explorer.exe
+          var myStringLC = app.toLowerCase();
+          var mySubStringLC = ".zip";
+          let count_zips = myStringLC.split(mySubStringLC).length - 1;
+
+          // Replace explorer.exe with start if we have 2 zips
+          if(app.includes("explorer.exe")){
+            app = app.replace("/select", "select").replace(/\//g, "\\").replace("select", "/select")
+          }
+          if(count_zips > 1){
+            app = app.replace("explorer.exe", "start %windir%\\explorer.exe").replace("/select,", "")
+            app = app.substring(0, (text.lastIndexOf("\\"))).concat("\"")
+          }
         }
         console.info(app)
         
